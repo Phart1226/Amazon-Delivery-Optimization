@@ -12,5 +12,5 @@ Then to execute the code
 ```
 ./test
 ```
-Then enter the number of days you would like to simulate and the optimized delivery routes for each truck for each day will appear in the output. Any [x,y] coordinate with an * beside it represents a prime delivery.
+Then enter the number of days you would like to simulate and the optimized delivery routes for each truck for each day will appear in the output. Any [x,y] coordinate with an * beside it represents an Amazon Prime delivery.
 
