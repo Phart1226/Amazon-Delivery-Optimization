@@ -18,18 +18,23 @@ int main() {
     //generate the random new addresses for the next day and redistribute
     //repeat
     double maxDist = 130;
-    int numDays = 1;
+    int numDays;
+    std::cout << "Days to simulate: ";
+    std::cin >> numDays;
+
+    int currentDay = 1;
     
     //run through a number of days with the two trucks and new orders coming in everyday
-    while(!(numDays > 5)){
+    while(currentDay <= numDays){
         std::cout<<std::endl;
-        std::cout<<"Day "<<numDays<<std::endl;
+        std::cout<<"Day "<<currentDay<<std::endl;
         deliveries.print();
+        std::cout<< "Length of original route with only one truck: " << deliveries.length() << std::endl;
         std::cout<<std::endl;
         Route notDeliveredYest = deliveries.Prime(maxDist);
         deliveries = notDeliveredYest;
         deliveries.RandomAdd(numAddresses);
-        numDays++;
+        currentDay++;
     }
     
     
